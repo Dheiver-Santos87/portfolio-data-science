@@ -1,4 +1,6 @@
-# Performance usando de APIs do TensorFlow Estimator - TensorFlow v1.4
+# Performance usando de APIs do TensorFlow Estimator 
+
+- TensorFlow v1.4
 
 ## Performance usando as APIs do TF
 
