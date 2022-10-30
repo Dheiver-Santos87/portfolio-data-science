@@ -1,4 +1,4 @@
-![Performance usando de APIs do TensorFlow Estimator](portfolio-data-science/card-youtube-new.png)
+![.](portfolio-data-science/card-youtube-new.png)
 
 - TensorFlow v1.4
 
