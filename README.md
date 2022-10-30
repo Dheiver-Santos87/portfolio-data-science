@@ -1,14 +1,14 @@
-# Tutoriais de APIs do TensorFlow Estimator - TensorFlow v1.4
+# Performance usando de APIs do TensorFlow Estimator - TensorFlow v1.4
 
-## Os tutoriais usam as APIs do estimador TF para cobrir:
+## Performance usando as APIs do TF
 
-* Várias tarefas de ML, atualmente abrangendo:
+* projetos de ML, atualmente abrangendo:
   * Classificação
   * Regressão
   * Agrupamento (k-médias)
   * Análise de séries temporais (modelos AR)
   * Redução de Dimensionalidade (Autoencoding)
-  * Modelos de Sequência (RNN e LSTMs)
+  * Modelos Sequenciais (RNN e LSTMs)
   * Análise de Imagens (CNN para Classificação de Imagens)
   * Análise de texto (classificação de texto com embeddings, CNN e RNN)
 * Como usar **estimadores predefinidos** para treinar modelos de ML.
@@ -18,7 +18,7 @@
 * Uma abordagem padrão **orientada por metadados** para criar o modelo **coluna_recurso**(s), incluindo:
   * **características numéricas**
   * Recursos **categóricos** com **vocabulário**,
-  * **categórico** apresenta **balde de hash** e
+  * **categórico** apresenta **hash bucket** e
   * Recursos **categóricos** com **identidade**
 
 * Dados **pipelines de entrada** (input_fn) usando:
