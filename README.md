@@ -1,60 +1,57 @@
-# TensorFlow Estimator APIs Tutorials - TensorFlow v1.4
+# Tutoriais de APIs do TensorFlow Estimator - TensorFlow v1.4
 
-## The tutorials use the TF estimator APIs to cover:
+## Os tutoriais usam as APIs do estimador TF para cobrir:
 
-* Various ML tasks, currently covering:
-  * Classification
-  * Regression
-  * Clustering (k-means)
-  * Time-series Analysis (AR Models)
-  * Dimensionality Reduction (Autoencoding)
-  * Sequence Models (RNN and LSTMs)
-  * Image Analysis (CNN for Image Classification)
-  * Text Analysis (Text Classification with embeddings, CNN, and RNN)
-*  How to use **canned estimators**  to train ML models.
+* Várias tarefas de ML, atualmente abrangendo:
+  * Classificação
+  * Regressão
+  * Agrupamento (k-médias)
+  * Análise de séries temporais (modelos AR)
+  * Redução de Dimensionalidade (Autoencoding)
+  * Modelos de Sequência (RNN e LSTMs)
+  * Análise de Imagens (CNN para Classificação de Imagens)
+  * Análise de texto (classificação de texto com embeddings, CNN e RNN)
+* Como usar **estimadores predefinidos** para treinar modelos de ML.
   
-* How to implement **custom estimators** (model_fn & EstimatorSpec).
+* Como implementar **estimadores personalizados** (model_fn e EstimatorSpec).
 
-* A standard **metadata-driven** approach to build the model **feature_column**(s) including:
-  * **numerical** features
-  * **categorical** features with **vocabulary**, 
-  * **categorical** features **hash bucket**, and
-  * **categorical** features with **identity**
+* Uma abordagem padrão **orientada por metadados** para criar o modelo **coluna_recurso**(s), incluindo:
+  * **características numéricas**
+  * Recursos **categóricos** com **vocabulário**,
+  * **categórico** apresenta **balde de hash** e
+  * Recursos **categóricos** com **identidade**
 
-* Data **input pipelines** (input_fn) using:
-  * tf.estimator.inputs.**pandas_input_fn**, 
-  * tf.train.**string_input_producer**, and 
-  * tf.data.**Dataset** APIs to read both **.csv** and **.tfrecords** (tf.example) data files
-  * tf.contrib.timeseries.**RandomWindowInputFn** and **WholeDatasetInputFn** for time-series data
-  * Feature **preprocessing** and **creation** as part of reading data (input_fn), for example, sin, sqrt, polynomial expansion, fourier transform, log, boolean comparisons, euclidean distance, custom formulas, etc.
+* Dados **pipelines de entrada** (input_fn) usando:
+  * tf.estimator.inputs.**pandas_input_fn**,
+  * tf.train.**string_input_producer** e
+  * APIs tf.data.**Dataset** para ler arquivos de dados **.csv** e **.tfrecords** (tf.example)
+  * tf.contrib.timeseries.**RandomWindowInputFn** e **WholeDatasetInputFn** para dados de série temporal
+  * Recurso **pré-processamento** e **criação** como parte da leitura de dados (input_fn), por exemplo, sin, sqrt, expansão polinomial, transformada de Fourier, log, comparações booleanas, distância euclidiana, fórmulas personalizadas etc.
 
-* A standard approach to prepare **wide** (sparse) and **deep** (dense) feature_column(s) for Wide and Deep **DNN Liner Combined Models**
+* Uma abordagem padrão para preparar feature_column(s) **wide** (esparse) e **deep** (dense) para wide and deep **DNN Liner Combined Models**
 
-* The use of **normalizer_fn** in numeric_column() to **scale** the numeric features using pre-computed statistics (for Min-Max or Standard scaling)
+* O uso de **normalizer_fn** em numeric_column() para **escalar** os recursos numéricos usando estatísticas pré-computadas (para escala Mín-Máx ou Padrão)
 
-* The use of **weight_column** in the canned estimators, and in the loss metric in custom estimators.
+* O uso de **weight_column** nos estimadores predefinidos e na métrica de perda nos estimadores personalizados.
 
-* Implicit **Feature Engineering** as part of defining feature_colum(s), including:
-  * crossing, 
-  * clipping,
-  * embedding,
-  * indicators (encoding categorical features), and
-  * bucketization
-  *  How to use the  tf.contrib.learn.**experiment** APIs to train, evaluate, and export models
+* **Engenharia de recursos** implícita como parte da definição de feature_colum(s), incluindo:
+  * cruzando,
+  * recorte,
+  * Incorporação,
+  * indicadores (codificando recursos categóricos) e
+  * bucketização
+  * Como usar as APIs tf.contrib.learn.**experiment** para treinar, avaliar e exportar modelos
 
-* Howe to use the tf.estimator.**train_and_evaluate** function (along with trainSpec & evalSpec) train, evaluate, and export models
+* Como usar a função tf.estimator.**train_and_evaluate** (junto com trainSpec e evalSpec) treinar, avaliar e exportar modelos
 
-* How to use **tf.train.exponential_decay** function as a learning rate scheduler
+* Como usar a função **tf.train.exponential_decay** como um agendador de taxa de aprendizado
 
-* How to **serve** exported model (export_savedmodel) using **csv** and **json** inputs
+* Como **servir** o modelo exportado (export_savedmodel) usando entradas **csv** e **json**
 
-## Coming Soon:
-* Early-stopping implementation
-* DynamicRnnEstimator and the use of variable-length sequences
-* Collaborative Filtering for Recommendation Models
-* Text Analysis (Topic Models, Word/Doc embedding, etc.)
-* tf.Transform to preprocessing and feature engineering
-* keras examples
-
-
-
+## Em breve:
+* Implementação de parada antecipada
+* DynamicRnnEstimator e o uso de sequências de comprimento variável
+* Filtragem Colaborativa para Modelos de Recomendação
+* Análise de texto (Modelos de tópicos, incorporação de Word/Doc, etc.)
+* tf.Transform para pré-processamento e engenharia de recursos
+* exemplos de keras
